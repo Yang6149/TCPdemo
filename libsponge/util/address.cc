@@ -8,7 +8,7 @@
 #include <netdb.h>
 #include <stdexcept>
 #include <system_error>
-
+#include <iostream>
 using namespace std;
 
 //! Converts Raw to `sockaddr *`.
@@ -24,7 +24,7 @@ Address::Address(const sockaddr *addr, const size_t size) : _size(size) {
     if (size > sizeof(_address.storage)) {
         throw runtime_error("invalid sockaddr size");
     }
-
+    std::cout<<"\n\n--------"<<addr<<"、"<<_address<<"、"<<size<<"----------\n\n";
     memcpy(&_address.storage, addr, size);
 }
 

@@ -9,16 +9,19 @@
 #include <stdexcept>
 #include <sys/socket.h>
 #include <vector>
-
+#include <iostream>
 int main() {
     try {
-        {
-#include "socket_example_1.cc"
-        } {
-#include "socket_example_2.cc"
-        } {
-#include "socket_example_3.cc"
-        }
+//        {
+//            std::cout<<"example1 \n";
+//#include "socket_example_1.cc"
+//        } {
+//            std::cout<<"example2 \n";
+//#include "socket_example_2.cc"
+//        } {
+//            std::cout<<"example3 \n";
+//#include "socket_example_3.cc"
+//        }
     } catch (...) {
         return EXIT_FAILURE;
     }
